@@ -11,7 +11,7 @@ import org.springframework.data.mongodb.core.mapping.Document;
 import java.util.ArrayList;
 import java.util.List;
 
-@Document(collection = "users")
+@Document(collection = "/users")
 @Data
 public class User {
 
@@ -23,5 +23,5 @@ public class User {
     @NonNull
     private String password;
     @DBRef
-    private List<JournalEntry> journalEntryList = new ArrayList<>();
+    private List<JournalEntry> journalEntries = new ArrayList<>();
 }
