@@ -28,7 +28,6 @@ public class JournalEntryService {
         JournalEntry save = journalEntryRepository.save(journalEntry);
         user.getJournalEntries().add(save);
         userService.saveEntry(user);
-
     }
 
     public void saveEntry(JournalEntry journalEntry){
@@ -38,7 +37,6 @@ public class JournalEntryService {
     public List<JournalEntry> getAll(){
         return journalEntryRepository.findAll();
     }
-
 
     public Optional<JournalEntry> findById(ObjectId id){
         return journalEntryRepository.findById(id);
